@@ -1,0 +1,92 @@
+@font-face
+  font-family: 'Menlo Regular'
+  font-style: normal
+  font-weight: normal
+  src: local('Menlo Regular'), url('fonts/Menlo-Regular.woff') format('woff')
+
+$white: #ffffff
+$purple: #7F2C9D
+$green: #A6E8DD
+$lightGreen: #F0FFFD
+
+html, body 
+  height: 100%
+  min-height: 100%
+
+body
+  background: $purple
+  font-family: 'Menlo Regular'
+  color: $white
+  padding: 0
+  margin: 0
+
+h1, h2, h3, h4, h5, h6 
+  padding: 0
+  margin: 0
+
+.clearfix
+  overflow: auto
+
+.btn 
+  float: left
+  width: 24%
+  background: $white
+  border: 1px solid #E7FFFC
+  color: $green
+  font-weight: normal
+  font-size: 25px
+  padding: 25px 0
+  display: flex 
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  transition: 0.2s 0s ease-out
+
+  &:hover 
+    background: $lightGreen
+    transition: 0.25s 0s ease-in
+
+.btn-styled
+  background: $lightGreen
+  border: 1px solid #DDFAF6
+
+.calc
+  background: #A6E8DD
+  // box-shadow: 0 -50px 50px 0 rgba(58,58,58,0.36), 0 90px 90px 0 rgba(43,43,43,0.21)
+  // border-radius: 16px
+  padding: 20px
+  float: left
+
+  &__result 
+    padding: 30px 0 60px
+
+    &--number 
+
+      h2 
+        font-weight: bold
+        font-size: 55px
+        color: #FFFFFF
+        text-align: right
+  
+  &__keyboard
+    float: left
+    width: 100%
+
+    &--buttons
+      float: left
+      width: 100%
+
+      .btn-ac
+        border-radius: 10px 0 0 0
+
+      .btn-divisao
+        border-radius: 0 10px 0 0
+
+      .btn-0
+        border-radius: 0 0 0 10px
+        width: 48.7%
+
+      .btn-igual
+        border-radius: 0 0 10px 0
+
+@import 'mixins'
